@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_id"
+        android:text="Order #1"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name_label"
+        android:text="Name"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_below="@id/order_id"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:text="Savinay"
+        android:layout_toRightOf="@id/name_label"
+        android:layout_below="@id/order_id"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address_label"
+        android:text="Address"
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_below="@id/name_label"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:text="214 Grange Road, Rathfarnham, Dublin 16, D16KR74"
+        android:layout_toRightOf="@id/address_label"
+        android:layout_below="@id/name"
+        android:maxWidth="@dimen/_200sdp"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_label"
+        android:text="Phone No."
+        android:layout_alignParentLeft="true"
+        android:textStyle="bold"
+        android:layout_below="@id/address"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:text="0833198471"
+        android:layout_toRightOf="@id/phone_label"
+        android:layout_below="@id/address"
+        android:maxWidth="@dimen/_200sdp"
+        android:layout_marginLeft="@dimen/_14sdp"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    <ListView
+        android:id="@+id/products_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/phone"
+        android:layout_marginTop="@dimen/_10sdp"/>
+</RelativeLayout>

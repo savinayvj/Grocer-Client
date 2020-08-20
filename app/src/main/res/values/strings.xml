@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Grocer Client</string>
+
+    <string-array name="categories">
+        <item>bread</item>
+        <item>dental care</item>
+        <item>drink</item>
+    </string-array>
+</resources>

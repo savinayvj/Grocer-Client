@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/view_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Stock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_200sdp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:paddingRight="@dimen/_65sdp"
+        android:paddingLeft="@dimen/_65sdp"
+        />
+
+    <Button
+        android:id="@+id/view_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Orders"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/view_stock"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:paddingRight="@dimen/_65sdp"
+        android:paddingLeft="@dimen/_65sdp"
+        />
+
+    <Button
+        android:id="@+id/search_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search/Add products to stock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/view_order_button"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:text="Add"/>
+
+</RelativeLayout>
