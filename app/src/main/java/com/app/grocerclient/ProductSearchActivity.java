@@ -106,7 +106,9 @@ public class ProductSearchActivity extends AppCompatActivity {
             builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    //Yes function
+                    Intent intent = new Intent(ProductSearchActivity.this,NewProductActivity.class);
+                    startActivity(intent);
+
                 }
             });
             builder.setNegativeButton("No", new DialogInterface.OnClickListener() {

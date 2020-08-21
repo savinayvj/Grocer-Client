@@ -33,6 +33,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
     TextView item_desc;
     String update_key;
     Spinner categories;
+    Button removeFromStock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
         addToStock = (Button) findViewById(R.id.addtostock_button);
         item_desc = (TextView)findViewById(R.id.item_desc_detailed);
         categories = (Spinner) findViewById(R.id.category_selector);
+        removeFromStock = (Button) findViewById(R.id.removefromstock_button);
         final String[] categories_list = getResources().getStringArray(R.array.categories);
 
 
@@ -125,6 +127,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
                                 Products prod1 = data.getValue(Products.class);
                                 new_quantity = prod1.productQuantity + Integer.parseInt(item_count.getText().toString());
+                                finish();
 
 
                             }
@@ -145,6 +148,34 @@ public class ItemDetailsActivity extends AppCompatActivity {
 
             }
         });
+
+
+        removeFromStock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                final DatabaseReference myRef = database.getReference("products");
+                Query qr = myRef.orderByChild("productId").equalTo(id);
+                qr.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        for(DataSnapshot dataSnapshot :  snapshot.getChildren())
+                        {
+                            dataSnapshot.getRef().setValue(null);
+                            finish();
+
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            }
+        });
+
         //Get image for product from Firebase Storage
         new GlideHelper(item_image_detailed).getImageForProduct(id);
 

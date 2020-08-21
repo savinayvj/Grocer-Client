@@ -6,15 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/logo"
+        android:background="@color/colorPrimary"/>
+
     <Button
         android:id="@+id/view_stock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="View Stock"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_100sdp"
         android:background="@drawable/button_background"
         android:textColor="#ffffff"
+        android:layout_below="@id/logo"
         android:paddingRight="@dimen/_65sdp"
         android:paddingLeft="@dimen/_65sdp"
         />
@@ -29,8 +37,8 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/button_background"
         android:textColor="#ffffff"
-        android:paddingRight="@dimen/_65sdp"
-        android:paddingLeft="@dimen/_65sdp"
+        android:paddingRight="@dimen/_63sdp"
+        android:paddingLeft="@dimen/_63sdp"
         />
 
     <Button
@@ -47,10 +55,5 @@
         android:paddingLeft="@dimen/_10sdp"
         />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:text="Add"/>
 
 </RelativeLayout>
